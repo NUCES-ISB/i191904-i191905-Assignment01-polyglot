@@ -1,5 +1,5 @@
-from polyglot.base import Sequence
+from polyglot.text import Word
 
-def test_getText():
-  obj=Sequence("Hello")
-  assert obj.text()=='Hello'
+def test_getString():
+  obj=Word("Hello")
+  assert obj.str()=="Hello"
