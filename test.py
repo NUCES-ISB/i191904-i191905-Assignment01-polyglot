@@ -2,4 +2,4 @@ from polyglot.base import Sequence
 
 def test_getText():
   obj=Sequence("Hello")
-  assert obj.text()=="Hello"
+  assert obj.text()=='Hello'
