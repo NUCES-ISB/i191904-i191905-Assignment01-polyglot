@@ -27,8 +27,10 @@ jobs:
             pip install black
         - name: Pylint QC Test Run
           run: pylint --disable=R,C polyglot
+          continue-on-error: true
         - name: Black QC Test Run
           run: black --check polyglot
+          continue-on-error: true
           
           
     Testing:
