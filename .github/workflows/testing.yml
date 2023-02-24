@@ -32,7 +32,6 @@ jobs:
           run: black --check polyglot
           continue-on-error: true
           
-          
     Testing:
     
         runs-on: ubuntu-latest
