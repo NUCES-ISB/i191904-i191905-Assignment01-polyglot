@@ -46,5 +46,6 @@ jobs:
             pip install pytest
             pip install six
             pip install numpy
+            pip install icu
         - name: Run Tests
           run: pytest test.py
