@@ -1,4 +1,4 @@
-from base import Sequence
+from polyglot.base import Sequence
 
 def test_getText():
   obj=Sequence("Hello")
