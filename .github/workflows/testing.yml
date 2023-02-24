@@ -46,6 +46,8 @@ jobs:
             pip install pytest
             pip install six
             pip install numpy
-            pip install icu
+            pip install pyicu
+            pip install pycld2
+            pip install morfessor
         - name: Run Tests
           run: pytest test.py
