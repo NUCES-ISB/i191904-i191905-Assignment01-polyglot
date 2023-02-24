@@ -2,4 +2,4 @@ from polyglot.text import Word
 
 def test_getString():
   obj=Word("Hello")
-  assert obj.str()=="Hello"
+  assert str(obj)=="Hello"
