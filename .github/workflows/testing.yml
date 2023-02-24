@@ -53,7 +53,7 @@ jobs:
             pip install pycld2
             pip install morfessor
         - name: Run Tests
-          run: pytest test.py
+          run: pytest test2.py
 
     Code-QL:
     
