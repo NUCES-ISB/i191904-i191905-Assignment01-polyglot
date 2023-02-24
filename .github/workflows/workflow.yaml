@@ -1,0 +1,38 @@
+name: testing, format and lint checking
+
+on: 
+  push:
+    branches: [ i191905-dev ]
+
+jobs:
+
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest
+        pip install six
+        pip install numpy
+        pip install pyicu
+        pip install pycld2
+        pip install morfessor
+    - name: Testing the code
+      run: pytest test.py
+
+  formatting-and-linting:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Install formatting and linting libraries
+      run: pip install black pylint
+    - name: Lint-checking the code
+      run: pylint --disable=R,C polyglot
+      continue-on-error: true
+    - name: Format-checking the code
+      run: black --check polyglot
+      continue-on-error: true

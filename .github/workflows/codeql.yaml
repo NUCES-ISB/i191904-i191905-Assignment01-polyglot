@@ -1,0 +1,23 @@
+name: codeql on push
+
+on: 
+  push:
+    branches: [ i191905-dev ]
+
+jobs:
+
+  codeQL:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    
+    steps:
+      - uses: actions/checkout@v3
+      - uses: github/codeql-action/init@v2
+        with:
+          languages: ${{ matrix.language }}
+      - uses: github/codeql-action/autobuild@v2
+      - uses: github/codeql-action/analyze@v2
