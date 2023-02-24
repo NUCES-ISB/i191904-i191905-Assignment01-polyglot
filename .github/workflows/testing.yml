@@ -3,9 +3,9 @@ name: push event workflow
 on:
 
     push:
-      branches: [ i191904 ]
+      branches: [ i191904-dev ]
     pull_request:
-      branches: [ i191904 ]
+      branches: [ i191904-dev ]
 
 jobs:
 
