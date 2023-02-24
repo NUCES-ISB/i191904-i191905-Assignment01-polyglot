@@ -1,1 +1,44 @@
+name: push event workflow
 
+on:
+
+    push:
+      branches: [ i191904 ]
+    pull_request:
+      branches: [ i191904 ]
+
+jobs:
+
+    Code_Quality:
+    
+        runs-on: ubunntu-latest
+        
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+        - name: Install Python 3.11
+          uses: actions/setup-python@v2
+          with:
+            python-version: 3.11
+        - name: Install Dependencies
+          run: |
+            pip install flake8
+        - name: flake8 QC Test
+          uses: suo/flake8-github-action@releases/v1
+          
+    testing:
+    
+        runs-on: ubunntu-latest
+        
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+        - name: Install Python 3.11
+          uses: actions/setup-python@v2
+          with:
+            python-version: 3.11
+        - name: Install Dependencies
+          run: |
+            pip install pytest
+        - name: Run Tests
+          run: pytest test.py
