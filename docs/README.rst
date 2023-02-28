@@ -216,3 +216,9 @@ Transliteration
 
     препрокессинг
 
+
+Testcases and Code Quality
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Some testcases added for repository testing
+-  CodeQL analysis included in report
