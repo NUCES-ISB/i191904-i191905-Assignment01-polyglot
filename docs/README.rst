@@ -220,5 +220,5 @@ Transliteration
 Testcases and Code Quality
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Some testcases added for repository testing
--  CodeQL analysis included in report
+-  Some testcases added for repository testing of polyglot library.
+-  CodeQL analysis included in report.
